@@ -83,7 +83,6 @@ body {
 .introducao p {
   color: #22223b;
   font-weight: 600;
-  background: #f8f8ff;
   border-radius: 8px;
   padding: 8px 20px;
   display: inline-block;
@@ -132,10 +131,8 @@ body {
 }
 
 .swiper-slide img {
-  width: 90px;
-  height: 90px;
-  max-width: 90px;
-  max-height: 90px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
   background: #fff;
   border-radius: 8px;
@@ -164,4 +161,111 @@ body {
   top: 50%;
   transform: translateY(-50%);
   transition: background 0.2s, color 0.2s;
+}
+
+/* === EXPERIÊNCIA CARDS MODERNO === */
+.experiencia-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.experiencia-card {
+  display: flex;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(112, 28, 218, 0.07), 0 1.5px 8px rgba(0,0,0,0.04);
+  padding: 32px 32px 24px 0;
+  position: relative;
+  align-items: flex-start;
+  min-height: 140px;
+}
+
+.experiencia-ano {
+  min-width: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #701cda;
+  text-align: right;
+  margin-right: 32px;
+  position: relative;
+  padding-top: 6px;
+}
+.experiencia-ano::before {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #701cda 60%, #a839ff 100%);
+  border-radius: 8px;
+  margin-left: 16px;
+}
+
+.experiencia-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experiencia-titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 2px;
+}
+
+.experiencia-cargo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6c6c80;
+  margin-bottom: 8px;
+}
+
+.experiencia-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.experiencia-tags span {
+  background: #f8f8ff;
+  color: #701cda;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 16px;
+  padding: 4px 14px;
+  box-shadow: 0 1px 4px rgba(112, 28, 218, 0.06);
+  transition: background 0.3s, color 0.3s;
+}
+.experiencia-tags span:hover {
+  background: linear-gradient(90deg, #701cda 60%, #a839ff 100%);
+  color: #fff;
+}
+
+.experiencia-descricao {
+  color: #22223b;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .experiencia-card {
+    flex-direction: column;
+    padding: 24px 16px 16px 16px;
+    min-height: unset;
+  }
+  .experiencia-ano {
+    text-align: left;
+    margin-bottom: 8px;
+    margin-right: 0;
+    padding-top: 0;
+  }
+  .experiencia-ano::before {
+    display: none;
+  }
 }
